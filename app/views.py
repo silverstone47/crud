@@ -31,5 +31,5 @@ def userApi(request, id=0):
         user = User.objects.get(userId=id)
         user.delete()
         return JsonResponse('deleted', safe=False)
-    return JsonResponse('delete failed')            
+    return JsonResponse('delete failed', safe=False)            
 
